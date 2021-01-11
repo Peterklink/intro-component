@@ -1,0 +1,168 @@
+/* containers */
+body{
+  background-image: url("images/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+  color: white;
+  font-family: "Poppins";
+  font-size: 16px;
+  margin:0;
+}
+main{
+  display:grid;
+  height:100vh;
+  grid-template-areas:
+  "header signUp"
+  "footer footer";
+  place-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr auto;
+}
+.header{
+  grid-area: header;
+  display:grid;
+  width:70%;
+  margin-left:150px;
+}
+.right{
+  grid-area: signUp;
+  width: 80%;
+}
+.signUp{
+  box-sizing: border-box;
+  width:80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px 30px 40px;
+  text-align: center;
+  box-shadow: 0 6px rgba(0,0,0, 0.2);
+}
+
+/* fonts */
+h1{
+  font-size:3em;
+}
+span{
+  color: hsl(246, 25%, 77%) ;
+  font-size: 8px;
+  line-height:0;
+  margin:0;
+}
+span > b{
+  color: hsl(0, 100%, 74%);
+}
+input::placeholder{
+  color: hsl(249, 10%, 26%);
+}
+/* buttons */
+.btn{
+  border: none;
+  height:50px;
+  border-radius: 8px;
+  outline:none;
+}
+.btn:hover{
+  filter: opacity(90%);
+  cursor:pointer;
+}
+.btn:active{
+  transform: translateY(5%) scale(0.99);
+}
+.blue{
+  width:80%;
+  background-color:hsl(248, 32%, 49%);
+  color: white;
+  margin-bottom: 25px;
+  box-shadow: 0 6px rgba(0,0,0, 0.2);
+}
+.green{
+  width: 100%;
+  text-transform: uppercase;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  margin-top:15px;
+  box-shadow: 0 2px rgba(0,0,0, 0.5);
+}
+/* general */
+form{
+  text-align: right;
+}
+
+input{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 0 20px;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: 0.5px solid hsl(246, 25%, 77%);
+}
+footer{
+  grid-area: footer;
+  bottom:0;
+  margin:0;
+  padding:0;
+  height:auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin:0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* animation classes */
+.error{
+background-image: url("images/icon-error.svg");
+background-repeat: no-repeat;
+background-position: 95% 50%;
+border-color: hsl(0, 100%, 74%);
+}
+
+form > span{
+  color:  hsl(0, 100%, 74%);
+  font-style: italic;
+}
+@media screen and (max-width:800px){
+  body{
+    font-size:13px;
+  }
+  h1{
+    font-size: 2.5em;
+    margin: 50px 10px 10px;
+  }
+  main{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-row-gap: 20px;
+    grid-template-areas:
+    "header"
+    "signUp"
+    "footer";
+    text-align: center;
+  }
+  .header{
+    margin:0;
+    width:90%;
+  }
+  .right{
+    grid-area: signUp;
+    width: 100%;
+  }
+  .signUp{
+    margin:auto;
+    width:90%;
+  }
+  .blue{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height:80px;
+    width:90%;
+  }
+}
