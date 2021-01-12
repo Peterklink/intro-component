@@ -59,14 +59,15 @@ input::placeholder{
   height:50px;
   border-radius: 8px;
   outline:none;
+  filter: opacity(90%);
 }
 .btn:hover{
-  filter: opacity(90%);
+  filter: opacity(100%);
   cursor:pointer;
   transform: scale(1.05);
 }
 .btn:active{
-  transform: translateY(5%) scale(0.99);
+  transform: scale(0.99);
 }
 .blue{
   width:80%;
@@ -117,6 +118,9 @@ footer{
   color: hsl(228, 45%, 44%);
 }
 
+.attribution:hover{
+  cursor: pointer;
+}
 /* animation classes */
 .error{
 background-image: url("images/icon-error.svg");
